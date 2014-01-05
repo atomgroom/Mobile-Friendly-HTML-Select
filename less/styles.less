@@ -1,0 +1,58 @@
+@import "mixins.less";
+@import "variables.less";
+@import "960.less";
+@import "normalize.less";
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-indent: 0.01px; // firefox
+    text-overflow: ''; // firefox 
+}
+
+.selectButtonContainer {
+    position: relative;
+    padding: 10px;
+    .round-corners-1;
+    .gradient-color-1;
+    
+    &:after {
+	    width: 0; 
+	    height: 0; 
+	    border-left: 5px solid transparent;
+	    border-right: 5px solid transparent;
+	    border-top: 5px solid @brand-color-4;
+        position: absolute;
+        z-index: 101;
+        top: 17px;
+        right: 18px;
+        content:"";
+    }
+}
+.selectButton {
+    background: none;
+    border: none;
+    text-align: left;
+    display: block;
+    color: @brand-color-4;
+    padding-right:20px;
+    
+}
+
+/* OOCSS Borders */
+.borderPrimary {
+    border: @border-style-1 @border-width-1 @brand-color-1;
+}
+.borderPrimary--top {
+    border-top: @border-style-1 @border-width-1 @brand-color-1;
+}
+.borderPrimary--right {
+    border-right: @border-style-1 @border-width-1 @brand-color-1;
+}
+.borderPrimary--bottom {
+    border-bottom: @border-style-1 @border-width-1 @brand-color-1;
+}
+.borderPrimary--left {
+    border-left: @border-style-1 @border-width-1 @brand-color-1;
+}
